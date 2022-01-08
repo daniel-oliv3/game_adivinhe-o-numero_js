@@ -1,0 +1,30 @@
+body {
+    background: #000;
+}
+
+#fundo {
+    width: 440px;
+    height: 200px;
+    background: #999;
+    border: outset 5px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    top: 50px;
+}
+
+#grade {
+    
+}
+
+#escala {
+    
+}
+
+#ponteiro {
+    
+}
+
+#saida {
+    
+}
