@@ -40,6 +40,13 @@ body {
     background-image: url("../img/ponteiro.png");
 }
 
+button {
+    padding: 0 20px;
+    background: linear-gradient(top, #a3a3a3, #000);
+    background: -moz-linear-gradient(top, #a3a3a3, #000);
+    background: -webkit-linear-gradient(top, #a3a3a3, #000);
+}
+
 #saida {
     
 }
