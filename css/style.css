@@ -18,7 +18,7 @@ body {
     height: 80px;
     background: #fff;
     position: relative;
-    left: 20px;
+    left: 15px;
     top: 5px;
     border: inset 5px #333;
 }
@@ -32,7 +32,12 @@ body {
 }
 
 #ponteiro {
-    
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    left: 13px;
+    top: 7px;
+    background-image: url("../img/ponteiro.png");
 }
 
 #saida {
