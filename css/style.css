@@ -6,7 +6,7 @@ body {
     width: 440px;
     height: 200px;
     background: #999;
-    border: outset 5px;
+    border: outset 5px #ccc;
     position: relative;
     text-align: center;
     margin: auto;
@@ -14,7 +14,13 @@ body {
 }
 
 #grade {
-    
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    position: relative;
+    left: 20px;
+    top: 5px;
+    border: inset 5px #333;
 }
 
 #escala {
