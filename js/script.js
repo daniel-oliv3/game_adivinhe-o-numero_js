@@ -1,5 +1,6 @@
 window.onload = function(){
-    var numeromisterioso = Math.floor(Math.random() * 101);
+    var numeroMisterioso = Math.floor(Math.random() * 101);
+    //alert(numeroMisterioso);
     var chuteDoJogador = 0;
     var tentativasRestantes = 10;
     var tentativas = 0;
@@ -13,6 +14,14 @@ window.onload = function(){
     var btn = document.querySelector("button");
 
     btn.addEventListener("click", clickFunction);
+
+    window.addEventListener("keydown", keydownFunction);
+
+    function keydownFunction(e){
+        if(e.keyCode == 13){
+            validarJogada();
+        }
+    }
 
     function clickFunction(){
         validarJogada();
@@ -35,8 +44,42 @@ window.onload = function(){
 
     function playGame(){
         render();
+        tentativas++;
+        tentativasRestantes--;
+        mensagemAoJogador = "<br>Tentativas: " + tentativas + " | Restantes: " + tentativasRestantes;
+
+        if(chuteDoJogador > numeroMisterioso){
+            saida.innerHTML = "Meu número é menor que " + chuteDoJogador + ". " + mensagemAoJogador;
+
+            if(tentativasRestantes < 1){
+                fimDoJogo();
+            }
+
+        }else if(chuteDoJogador < numeroMisterioso){
+            saida.innerHTML = "Meu número é maior que " + chuteDoJogador + ". " + mensagemAoJogador;
+
+            if(tentativasRestantes < 1){
+                fimDoJogo();
+            }
+
+        }else if(chuteDoJogador === numeroMisterioso){
+            vitoria = true;
+            fimDoJogo();
+        }
     }
 
+    function fimDoJogo(){
+        if(vitoria){
+            saida.innerHTML = "Parabéns, você adivinhou! o número era " + numeroMisterioso + "<br>"
+             + "Foram feitas " + tentativas + " tentativas";
+        }else {
+            saida.innerHTML = "Acabaram suas tentativas. <br> O núero era " + numeroMisterioso;
+        }
+        btn.removeEventListener("click", clickFunction);
+        window.removeEventListener("keydown", keydownFunction);
+        btn.disabled = true;
+        entrada.disabled = true;
+    }
 
     function render(){
        ponteiro.style.left = (chuteDoJogador * 3.7) + 13 + "px";
