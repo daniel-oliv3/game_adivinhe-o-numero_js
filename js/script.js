@@ -21,7 +21,25 @@ window.onload = function(){
 
     function validarJogada(){
         chuteDoJogador = parseInt(entrada.value);
+        entrada.value = "";
+        entrada.focus();
+
+        if(isNaN(chuteDoJogador)){
+            saida.innerHTML = "Por favor, digite apenas números.";
+        }else if(chuteDoJogador > 100 || chuteDoJogador < 0){
+            saida.innerHTML = "Por favor, digite apenas valores entre 0 e 100.";
+        }else {
+            playGame();
+        }
     }
 
-    
+    function playGame(){
+        render();
+    }
+
+
+    function render(){
+       ponteiro.style.left = (chuteDoJogador * 3.7) + 13 + "px";
+    }
+
 }
