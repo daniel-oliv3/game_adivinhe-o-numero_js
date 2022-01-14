@@ -39,7 +39,7 @@ body {
     left: 13px;
     top: 7px;
     background-image: url("../img/ponteiro.png");
-    transition: left 0.5s;
+    transition: left 0.5s; /*Este parâmetro é responsável pela animação. A sintaxe é: característica a ser animada e tempo de duração da animação*/
 }
 
 button {
