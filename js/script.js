@@ -7,4 +7,21 @@ window.onload = function(){
     var vitoria = false;
 
     var entrada = document.querySelector("#entrada");
+    var saida = document.querySelector("#saida");
+    var ponteiro = document.querySelector("#ponteiro");
+
+    var btn = document.querySelector("button");
+
+    btn.addEventListener("click", clickFunction);
+
+    function clickFunction(){
+        validarJogada();
+    }
+
+
+    function validarJogada(){
+        chuteDoJogador = parseInt(entrada.value);
+    }
+
+    
 }
