@@ -77,7 +77,7 @@ window.onload = function(){
             saida.innerHTML = "Parabéns, você adivinhou! o número era " + numeroMisterioso + "<br>"
              + "Foram feitas " + tentativas + " tentativas";
         }else {
-            saida.innerHTML = "Acabaram suas tentativas. <br> O núero era " + numeroMisterioso;
+            saida.innerHTML = "Acabaram suas tentativas. <br> O número era " + numeroMisterioso;
         }
 
         //desabilitamos os elementos de interação com o usuário
